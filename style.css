@@ -1,0 +1,162 @@
+/* Importação da fonte Roboto do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #3498db; /* Azul vibrante */
+  --secondary-color: #2c3e50; /* Azul escuro quase preto */
+  --accent-color: #e74c3c; /* Vermelho para destaque (opcional) */
+  --text-color: #333; /* Texto escuro */
+  --background-light: #f4f7f6; /* Fundo claro */
+  --background-dark: #ecf0f1; /* Fundo ligeiramente mais escuro */
+  --border-color: #ddd; /* Cor de borda suave */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/* Main Content */
+main {
+  flex: 1; /* Permite que o main ocupe o espaço restante */
+  padding: 40px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.8em;
+  color: var(--secondary-color);
+  padding: 20px 20px 0;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.05em;
+  color: #666;
+  padding: 0 20px 20px;
+  flex-grow: 1; /* Permite que a descrição ocupe o espaço restante */
+}
+
+.project-card .project-link {
+  display: block;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  border-top: 1px solid var(--border-color); /* Adiciona uma borda superior para separar */
+}
+
+.project-card .project-link:hover {
+  background: #2980b9; /* Tom mais escuro do azul ao passar o mouse */
+}
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+}
