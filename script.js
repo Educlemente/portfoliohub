@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Você pode personalizar o nome no header aqui também, ou diretamente no HTML
   const yourNameElement = document.querySelector("header h1");
   if (yourNameElement) {
-    yourNameElement.textContent = "Seu Nome Completo"; // Substitua pelo seu nome
+    yourNameElement.textContent = "Eduardo Cantuária Clemente"; // Substitua pelo seu nome
   }
 
   const footerNameElement = document.querySelector("footer p");
   if (footerNameElement) {
-    footerNameElement.innerHTML = `&copy; 2025 Seu Nome Completo. Todos os direitos reservados.`; // Substitua pelo seu nome
+    footerNameElement.innerHTML = `&copy; 2025 Eduardo Cantuária Clemente. Todos os direitos reservados.`; // Substitua pelo seu nome
   }
 });
